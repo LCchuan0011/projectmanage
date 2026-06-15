@@ -12,7 +12,7 @@
     --line:#e5e5ea; --line2:#f0f0f2; --hairline:rgba(0,0,0,.08);
     --text:#1d1d1f; --muted:#86868b; --muted2:#b7b7bd;
     --accent:#0071e3; --accent-strong:#005bb5;
-    --green:#34c759; --amber:#ff9500; --gray:#a1a1a6; --red:#ff3b30;
+    --green:#34c759; --amber:#ff9500; --purple:#af52de; --gray:#a1a1a6; --red:#ff3b30;
     --shadow:0 20px 60px rgba(0,0,0,.08);
     --shadow-soft:0 10px 30px rgba(0,0,0,.07);
   }
@@ -42,10 +42,15 @@
   /* ===== Gantt ===== */
   #ganttWrap{border:1px solid var(--hairline);border-radius:18px;background:var(--panel);overflow:hidden;box-shadow:var(--shadow);backdrop-filter:blur(18px)}
   .gantt-scroll{overflow:auto;max-height:62vh}
+  .gantt-resizer{height:14px;display:flex;align-items:center;justify-content:center;cursor:ns-resize;border-top:1px solid var(--line2);background:rgba(255,255,255,.55)}
+  .gantt-resizer::before{content:"";width:52px;height:4px;border-radius:999px;background:rgba(0,0,0,.16)}
+  .gantt-resizer:hover::before{background:rgba(0,113,227,.36)}
   .gantt-grid{position:relative;display:grid}
   .yhead{position:sticky;left:0;z-index:30;background:var(--panel);
     border-right:1px solid var(--line);display:flex;align-items:center;
     padding:0 10px;font-weight:600;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:uppercase}
+  button.yhead{width:100%;height:100%;cursor:pointer;text-align:left}
+  button.yhead:hover{color:var(--accent);background:rgba(0,113,227,.06)}
   .timehead{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);border-bottom:1px solid var(--line)}
   .corner{position:sticky;left:0;top:0;z-index:40;background:var(--panel);
     border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -59,6 +64,10 @@
   .tcol.today{background:rgba(0,113,227,.07)}
   .ycell{position:sticky;left:0;z-index:15;background:var(--panel);border-right:1px solid var(--line);
     border-bottom:1px solid var(--line2);display:flex;align-items:center}
+  .ycell.group-head{cursor:grab}
+  .ycell.group-head:active{cursor:grabbing}
+  .ycell.dragging{opacity:.52;box-shadow:0 0 0 2px rgba(0,113,227,.16) inset}
+  .ycell.drag-over{background:rgba(0,113,227,.08)}
   .row-track{position:relative;border-bottom:1px solid var(--line2)}
   .row-track:hover{background:rgba(255,255,255,.56)}
   .tier1-cell{font-weight:700;color:var(--text);font-size:12.5px}
@@ -145,6 +154,7 @@
         <span>—</span>
         <input type="date" id="rangeEnd" class="btn !px-2 !py-1.5" style="color:var(--text)">
       </div>
+      <div id="holidayHint" class="btn !cursor-default" style="color:var(--muted);background:rgba(255,255,255,.48)"></div>
       <button class="btn" id="fitBtn"><i data-lucide="maximize-2" class="icon"></i>自适应</button>
       <button class="btn" id="filterBtn"><i data-lucide="sliders-horizontal" class="icon"></i>筛选</button>
       <button class="btn" id="addBtn"><i data-lucide="plus" class="icon"></i>新增需求</button>
@@ -155,21 +165,12 @@
     </div>
   </header>
 
-  <!-- Legend -->
-  <div class="flex items-center gap-4 mb-3 text-[11.5px]" style="color:var(--muted)">
-    <span class="font-semibold" style="color:var(--text)">进度图例：</span>
-    <span class="flex items-center gap-1.5"><i class="legend-dot" style="background:var(--green)"></i>顺利 (≥实际预期)</span>
-    <span class="flex items-center gap-1.5"><i class="legend-dot" style="background:var(--amber)"></i>延期风险 (滞后于时间轴)</span>
-    <span class="flex items-center gap-1.5"><i class="legend-dot" style="background:var(--gray)"></i>未开始 (0%)</span>
-    <span class="flex items-center gap-1.5"><i class="legend-dot" style="background:var(--accent)"></i>已完成 (100%)</span>
-    <span class="ml-auto" style="color:var(--muted2)">提示：双击 Y 轴文字可重命名 · 双击甘特条可编辑详情 · 拖拽条身可整体平移</span>
-  </div>
-
   <!-- Gantt -->
   <div id="ganttWrap">
     <div class="gantt-scroll" id="ganttScroll">
       <div class="gantt-grid" id="ganttGrid"></div>
     </div>
+    <div class="gantt-resizer" id="ganttResizer" title="拖动调整甘特图高度"></div>
   </div>
 
   <!-- Master table -->
@@ -199,7 +200,7 @@ const DAY = 86400000;
 
 // 默认种子数据（与参考截图一致）
 const SEED = {
-  meta:{ gran:"day", rangeStart:"2026-06-01", rangeEnd:"2026-06-16", collapsed:[], filters:{priority:"全部",status:"全部",dept:"全部"} },
+  meta:{ gran:"day", rangeStart:"2026-06-01", rangeEnd:"2026-06-16", collapsed:[], featureOrder:[], prioritySort:null, ganttHeight:420, filters:{priority:"全部",status:"全部",dept:"全部"} },
   tasks:[
     {id:"REQ-2026-001",priority:"P1",tier1:"客户端",tier2:"iOS",featureName:"发帖强插关注列表功能",purpose:"提升关注关系链转化，增加发帖后互动入口曝光",status:"已完成",progress:100,owner:"鲁明",start:"2026-06-08",end:"2026-06-14",notes:""},
     {id:"REQ-2026-002",priority:"P1",tier1:"客户端",tier2:"Android",featureName:"发帖强插关注列表功能",purpose:"Android 端对齐 iOS 的关注列表强插策略",status:"已完成",progress:100,owner:"周国荣",start:"2026-06-08",end:"2026-06-14",notes:""},
@@ -229,6 +230,18 @@ function diffDays(a,b){ return Math.round((parseD(b)-parseD(a))/DAY); }
 function addDays(s,n){ const d=parseD(s); d.setDate(d.getDate()+n); return fmtD(d); }
 function isWeekend(dt){ const w=dt.getDay(); return w===0||w===6; }
 function todayStr(){ return fmtD(new Date()); }
+const HOLIDAYS = [
+  {date:"2026-01-01",name:"元旦",type:"法定节假日"},
+  {date:"2026-02-17",name:"春节",type:"法定节假日"},
+  {date:"2026-04-05",name:"清明节",type:"法定节假日"},
+  {date:"2026-05-01",name:"劳动节",type:"法定节假日"},
+  {date:"2026-05-10",name:"母亲节",type:"节日"},
+  {date:"2026-06-19",name:"端午节",type:"法定节假日"},
+  {date:"2026-06-21",name:"父亲节",type:"节日"},
+  {date:"2026-09-25",name:"中秋节",type:"法定节假日"},
+  {date:"2026-10-01",name:"国庆节",type:"法定节假日"},
+  {date:"2026-12-25",name:"圣诞节",type:"节日"}
+];
 function clampDate(s){ // 限制在 range 内
   const a=STATE.meta.rangeStart, b=STATE.meta.rangeEnd;
   if(parseD(s)<parseD(a)) return a; if(parseD(s)>parseD(b)) return b; return s;
@@ -255,18 +268,31 @@ function deriveStatusLabel(t){
 const STATUS_OPTIONS = ["未开始","顺利推进","有风险","已完成"];
 const STATUS_VAR = {"未开始":"--gray","顺利推进":"--green","有风险":"--amber","已完成":"--accent"};
 const PRIORITY_OPTIONS = ["P0","P1","P2"];
-const PRIORITY_VAR = {"P0":"--red","P1":"--amber","P2":"--accent"};
+const PRIORITY_VAR = {"P0":"--purple","P1":"--amber","P2":"--accent"};
 const TIER2_MAP = {
   "客户端":["iOS","Android","H5"],
   "服务端":["全局"],
   "设计":["UI"],
   "AI团队":["模型","算法","提示词","全局"],
+  "数据":["埋点","数仓","分析","全局"],
   "测试":["功能测试","回归测试","全局"],
-  "运营部":["逛逛","密友聊天","全局"]
+  "运营部":["逛逛","密友聊天","全局"],
+  "其他":[]
 };
-const TIER2_ORDER = ["全局","UI","iOS","Android","H5","模型","算法","提示词","功能测试","回归测试","逛逛","密友聊天"]; // pill 统一排序
+const TIER2_ORDER = ["全局","UI","iOS","Android","H5","模型","算法","提示词","埋点","数仓","分析","功能测试","回归测试","逛逛","密友聊天"]; // pill 统一排序
 function statusColor(s){ return getComputedStyle(document.documentElement).getPropertyValue(STATUS_VAR[s]||"--gray").trim(); }
 function priorityColor(p){ return getComputedStyle(document.documentElement).getPropertyValue(PRIORITY_VAR[p]||"--gray").trim(); }
+const DEPT_COLORS = {
+  "客户端":"#3b8eea",
+  "服务端":"#48b86a",
+  "设计":"#a66be2",
+  "AI团队":"#7471e8",
+  "数据":"#0f9f8f",
+  "测试":"#d88a18",
+  "运营部":"#24a8b5",
+  "其他":"#6e6e73"
+};
+function deptColor(task){ return DEPT_COLORS[task.tier1] || "#d1d1d6"; }
 const FEATURE_COLORS = ["#d7e6f3","#c9dff0","#b7d7e8","#dfe9d2","#cfe2c2","#f1e5c8","#efd4d6","#e8d7e6","#d9d5ed","#cfe8e8"];
 function featureColor(featureName){
   let hash=0;
@@ -300,6 +326,7 @@ function normalizeTask(raw, index){
   task.status = STATUS_OPTIONS.includes(task.status) ? task.status : deriveStatusLabel(task);
   task.start = /^\d{4}-\d{2}-\d{2}$/.test(task.start) ? task.start : fallback.start;
   task.end = /^\d{4}-\d{2}-\d{2}$/.test(task.end) ? task.end : fallback.end;
+  if(task.tier1==="其他" && !String(task.tier2||"").trim()) task.tier2="外部协作";
   if(parseD(task.end)<parseD(task.start)) task.end = task.start;
   return task;
 }
@@ -308,7 +335,10 @@ function normalizeState(state){
   state.meta.gran=state.meta.gran==="week"?"week":"day";
   state.meta.rangeStart=state.meta.rangeStart||SEED.meta.rangeStart;
   state.meta.rangeEnd=state.meta.rangeEnd||SEED.meta.rangeEnd;
-  state.meta.collapsed=Array.isArray(state.meta.collapsed)?state.meta.collapsed:[];
+  state.meta.collapsed=[];
+  state.meta.featureOrder=Array.isArray(state.meta.featureOrder)?state.meta.featureOrder:[];
+  state.meta.prioritySort=state.meta.prioritySort==="desc"?"desc":(state.meta.prioritySort==="asc"?"asc":null);
+  state.meta.ganttHeight=Math.max(220,Math.min(900,parseInt(state.meta.ganttHeight,10)||420));
   state.meta.filters={
     priority:state.meta.filters?.priority||"全部",
     status:state.meta.filters?.status||"全部",
@@ -327,24 +357,52 @@ function passesFilters(task){
 let STATE = load();
 
 /* ============ Y轴分组（以「需求名称」为第一列，合并同名 + 可折叠）============ */
-const TIER_ORDER = ["设计","客户端","服务端","AI团队","测试","运营部"];
+const TIER_ORDER = ["设计","客户端","服务端","AI团队","数据","测试","运营部","其他"];
 function deptLabel(t){ return t.tier2==="全局" ? t.tier1 : (t.tier1+" / "+t.tier2); }
-function priorityPill(priority){
+function prioritySelect(featureName, priority){
   const color=priorityColor(priority);
-  return `<span class="pill" style="background:${color}1f;color:${color};font-weight:700">${esc(priority||"P1")}</span>`;
+  return `<span class="pill priority-pill" style="background:${color}1f;color:${color};font-weight:700">
+    <select class="statussel gantt-priority-select" data-feat="${esc(featureName)}" style="color:${color};font-weight:700">
+      ${PRIORITY_OPTIONS.map(o=>`<option ${o===priority?"selected":""}>${o}</option>`).join("")}
+    </select>
+  </span>`;
 }
 function deptSortKey(t){
   const a=TIER_ORDER.indexOf(t.tier1), b=TIER2_ORDER.indexOf(t.tier2);
   return (a<0?99:a)*100 + (b<0?99:b);
 }
 function isCollapsed(fn){ return (STATE.meta.collapsed||[]).includes(fn); }
+function priorityRank(priority){ return PRIORITY_OPTIONS.indexOf(priority); }
+function ensureFeatureOrder(featureNames){
+  const known = new Set(featureNames);
+  STATE.meta.featureOrder = (STATE.meta.featureOrder||[]).filter(fn=>known.has(fn));
+  featureNames.forEach(fn=>{ if(!STATE.meta.featureOrder.includes(fn)) STATE.meta.featureOrder.push(fn); });
+}
+function moveFeatureBefore(sourceFeat,targetFeat){
+  const allFeatures=[...new Set(STATE.tasks.map(t=>t.featureName))];
+  ensureFeatureOrder(allFeatures);
+  const order=STATE.meta.featureOrder.filter(fn=>fn!==sourceFeat);
+  const targetIndex=order.indexOf(targetFeat);
+  order.splice(targetIndex<0?order.length:targetIndex,0,sourceFeat);
+  STATE.meta.featureOrder=order;
+}
 function buildGroups(){
   const order=[], groups={};
   STATE.tasks.filter(passesFilters).forEach(t=>{
     if(!groups[t.featureName]){ groups[t.featureName]=[]; order.push(t.featureName); }
     groups[t.featureName].push(t);
   });
-  return order.map(fn=>({
+  ensureFeatureOrder([...new Set(STATE.tasks.map(t=>t.featureName))]);
+  const manualIndex = fn => STATE.meta.featureOrder.indexOf(fn);
+  const sortedOrder = order.slice().sort((a,b)=>{
+    if(STATE.meta.prioritySort){
+      const pa=priorityRank(groups[a][0]?.priority), pb=priorityRank(groups[b][0]?.priority);
+      const dir=STATE.meta.prioritySort==="asc" ? 1 : -1;
+      if(pa!==pb) return (pa-pb)*dir;
+    }
+    return manualIndex(a)-manualIndex(b);
+  });
+  return sortedOrder.map(fn=>({
     featureName:fn,
     tasks:groups[fn].slice().sort((a,b)=>deptSortKey(a)-deptSortKey(b))
   }));
@@ -379,7 +437,8 @@ function renderGantt(){
   const corner = document.createElement("div");
   corner.className="corner"; corner.style.height=HEAD_H+"px";
   corner.style.display="grid"; corner.style.gridTemplateColumns=`${PRI_W}px ${INFO_W}px`;
-  corner.innerHTML=`<div class="yhead">优先级</div><div class="yhead">需求 / 部门</div>`;
+  const sortIcon = STATE.meta.prioritySort==="asc" ? " ↑" : (STATE.meta.prioritySort==="desc" ? " ↓" : "");
+  corner.innerHTML=`<button class="yhead priority-sort-head" type="button" title="按 P0 / P1 / P2 排序">优先级${sortIcon}</button><div class="yhead">需求 / 部门</div>`;
   grid.appendChild(corner);
 
   const timehead=document.createElement("div");
@@ -431,8 +490,10 @@ function renderGantt(){
     const head = g.tasks[0];
     // 组头行（需求名 + 折叠/删除）
     const yc=document.createElement("div");
-    yc.className="ycell"; yc.style.height=ROW_H+"px";
+    yc.className="ycell group-head"; yc.style.height=ROW_H+"px";
     yc.dataset.id=head.id;
+    yc.dataset.feat=g.featureName;
+    yc.draggable=true;
     yc.style.display="grid"; yc.style.gridTemplateColumns=`${PRI_W}px ${INFO_W}px`;
     const caret = multi
       ? `<span class="group-caret" data-feat="${esc(g.featureName)}" style="cursor:pointer;flex:none;display:inline-flex"><i data-lucide="${collapsed?'chevron-right':'chevron-down'}" style="width:14px;height:14px;color:var(--muted)"></i></span>`
@@ -442,40 +503,28 @@ function renderGantt(){
       <div class="task-cell editable text-[12px] font-semibold truncate" data-edit="featureName" data-id="${head.id}" title="${esc(g.featureName)}">${esc(g.featureName)}</div>
       ${multi?`<span class="text-[10px] px-1 rounded" style="background:rgba(242,242,247,.95);color:var(--muted);flex:none">${g.tasks.length}</span>`:""}
       <span class="group-del" data-feat="${esc(g.featureName)}" title="删除整个需求组" style="cursor:pointer;flex:none;display:inline-flex;margin-left:2px"><i data-lucide="trash-2" style="width:13px;height:13px;color:var(--muted2)"></i></span></div>`;
-    // 折叠时组头部门列展示该组所有部门色点汇总
-    let deptHtml;
-    if(multi && collapsed){
-      deptHtml = `<div class="flex items-center gap-1">`+g.tasks.map(t=>{const c=statusColor(t.status);return `<span class="legend-dot" title="${esc(deptLabel(t))} · ${esc(t.status)}" style="background:${c}"></span>`}).join("")+`<span class="text-[10px] ml-1" style="color:var(--muted)">${g.tasks.length} 个部门</span></div>`;
-    }else{
-      const c=statusColor(head.status);
-      deptHtml = `<span class="pill" style="background:${c}1f;color:${c}"><i class="legend-dot" style="background:${c}"></i>${esc(deptLabel(head))}</span>`;
-    }
-    yc.innerHTML = `<div class="flex items-center px-2.5 border-r" style="border-color:var(--line2)">${priorityPill(head.priority)}</div>
-      <div class="flex items-center px-2 min-w-0" style="gap:8px">${featBox}<span style="flex:none">${deptHtml}</span></div>`;
+    yc.innerHTML = `<div class="flex items-center px-2.5 border-r" style="border-color:var(--line2)">${prioritySelect(g.featureName, head.priority)}</div>
+      <div class="flex items-center px-2 min-w-0" style="gap:8px">${featBox}</div>`;
     yc.addEventListener("click",e=>{
-      if(e.target.closest(".group-caret,.group-add,.group-del,[contenteditable]")) return;
+      if(e.target.closest(".group-caret,.group-add,.group-del,.gantt-priority-select,[contenteditable]")) return;
       focusTableRow(head.id);
     });
     grid.appendChild(yc);
-    // 组头轨道：未折叠多行时只画第一条；折叠时画汇总条（最早起→最晚止）
-    if(multi && collapsed){
-      let mn=head.start,mx=head.end,sum=0;
-      g.tasks.forEach(t=>{ if(parseD(t.start)<parseD(mn))mn=t.start; if(parseD(t.end)>parseD(mx))mx=t.end; sum+=t.progress; });
-      addTrack(makeRollupBar(g,mn,mx,Math.round(sum/g.tasks.length),rs,unit));
-    }else{
-      addTrack(makeBar(head, rs, unit));
-    }
+    addTrack();
 
-    // 展开时其余部门各占一行
-    if(!collapsed && multi){
-      g.tasks.slice(1).forEach(task=>{
+    // 展开时所有部门都作为组头下的子行显示，组头不再混放部门
+    if(!collapsed){
+      g.tasks.forEach(task=>{
         const yc2=document.createElement("div");
         yc2.className="ycell"; yc2.style.height=ROW_H+"px";
         yc2.dataset.id=task.id;
         yc2.style.display="grid"; yc2.style.gridTemplateColumns=`${PRI_W}px ${INFO_W}px`;
-        const c=statusColor(task.status);
-        yc2.innerHTML=`<div class="flex items-center px-2.5 border-r" style="border-color:var(--line2)">${priorityPill(task.priority)}</div>
-          <div class="flex items-center px-2"><span class="pill" style="background:${c}1f;color:${c}"><i class="legend-dot" style="background:${c}"></i>${esc(deptLabel(task))}</span></div>`;
+        const c=deptColor(task);
+        yc2.innerHTML=`<div class="border-r" style="border-color:var(--line2)"></div>
+          <div class="flex items-center justify-between px-2" style="gap:10px">
+            <span class="text-[11px]" style="color:var(--muted2)">└</span>
+            <span class="pill" style="background:${c}1f;color:${c};margin-left:auto"><i class="legend-dot" style="background:${c}"></i>${esc(deptLabel(task))}</span>
+          </div>`;
         yc2.addEventListener("click",()=>focusTableRow(task.id));
         grid.appendChild(yc2);
         addTrack(makeBar(task, rs, unit));
@@ -553,8 +602,8 @@ function makeBar(task, rs, unit){
   const bar=document.createElement("div");
   bar.className="bar"; bar.dataset.id=task.id;
   bar.style.left=left+"px"; bar.style.top=((ROW_H-BAR_H)/2)+"px"; bar.style.width=width+"px";
-  bar.style.height=BAR_H+"px"; bar.style.background=color+"80"; bar.style.boxShadow="none";
-  bar.innerHTML = `<div class="barfill" style="width:${task.progress}%;background:${color};opacity:1;border-radius:999px"></div>
+  bar.style.height=BAR_H+"px"; bar.style.background=color+"66"; bar.style.boxShadow="none";
+  bar.innerHTML = `<div class="barfill" style="width:${task.progress}%;background:${color};opacity:.92;border-radius:999px"></div>
     <span class="barlabel" style="color:#4a4a4f;text-shadow:none;font-size:10px;line-height:${BAR_H}px;margin-left:6px">${esc(task.owner)} · ${task.progress}%</span>
     <div class="handle l"></div><div class="handle r"></div>`;
   bar.title = `${task.featureName}\n${deptLabel(task)}\n${task.start} → ${task.end} · ${task.progress}%\n${task.notes||""}\n（双击查看/编辑详情）`;
@@ -565,22 +614,6 @@ function makeBar(task, rs, unit){
   return bar;
 }
 
-// 折叠态汇总条（不可拖拽，双击展开）
-function makeRollupBar(group, mn, mx, avgProg, rs, unit){
-  const left = (diffDays(rs,mn)/unit)*COL_W;
-  const width = Math.max(COL_W*0.5, ((diffDays(mn,mx)+1)/unit)*COL_W);
-  const bar=document.createElement("div");
-  bar.className="bar"; bar.style.left=left+"px"; bar.style.top=((ROW_H-BAR_H)/2)+"px";
-  bar.style.width=width+"px"; bar.style.height=BAR_H+"px"; bar.style.boxShadow="none";
-  const color = featureColor(group.featureName);
-  bar.style.background=color+"80";
-  bar.style.cursor="pointer";
-  bar.innerHTML=`<div class="barfill" style="width:${avgProg}%;background:${color};opacity:1;border-radius:999px"></div>
-    <span class="barlabel" style="color:#4a4a4f;text-shadow:none;font-size:10px;line-height:${BAR_H}px;margin-left:6px">汇总 ${group.tasks.length} 项 · 均 ${avgProg}%</span>`;
-  bar.title=`${group.featureName}（折叠中）\n${mn} → ${mx} · 平均进度 ${avgProg}%\n双击或点左侧箭头展开`;
-  bar.addEventListener("dblclick",e=>{ e.stopPropagation(); toggleCollapse(group.featureName); });
-  return bar;
-}
 function toggleCollapse(fn){
   STATE.meta.collapsed = STATE.meta.collapsed||[];
   const i=STATE.meta.collapsed.indexOf(fn);
@@ -759,6 +792,16 @@ function autoExpandRange(t){
 
 /* ============ Y轴 inline 编辑 ============ */
 function bindYEdit(){
+  document.querySelectorAll('#ganttGrid .gantt-priority-select').forEach(sel=>{
+    sel.addEventListener("click",e=>e.stopPropagation());
+    sel.addEventListener("change",()=>{
+      const featureName=sel.dataset.feat;
+      STATE.tasks.forEach(task=>{
+        if(task.featureName===featureName) task.priority=sel.value;
+      });
+      save(); renderAll(); toast(`已更新「${featureName}」优先级为 ${sel.value}`);
+    });
+  });
   document.querySelectorAll('#ganttGrid .editable').forEach(el=>{
     el.addEventListener("dblclick",e=>{
       e.stopPropagation();
@@ -774,6 +817,7 @@ function bindYEdit(){
       if(field==="featureName"){
         // 组头改名：同名整组一起改，保持合并
         STATE.tasks.forEach(x=>{ if(x.featureName===old) x.featureName=v; });
+        if(STATE.meta.featureOrder){ const oi=STATE.meta.featureOrder.indexOf(old); if(oi>=0) STATE.meta.featureOrder[oi]=v; }
         if(STATE.meta.collapsed){ const ci=STATE.meta.collapsed.indexOf(old); if(ci>=0) STATE.meta.collapsed[ci]=v; }
       } else if(field==="tier1"||field==="tier2"){
         STATE.tasks.forEach(x=>{ if(x[field]===old && (field==="tier1"? true : x.tier1===t.tier1)) x[field]=v; });
@@ -789,6 +833,13 @@ function bindGridDelegation(){
   const grid=document.getElementById("ganttGrid");
   if(grid._delegated) return; grid._delegated=true;
   grid.addEventListener("click",e=>{
+    const priorityHead=e.target.closest(".priority-sort-head");
+    if(priorityHead){
+      e.stopPropagation();
+      STATE.meta.prioritySort = STATE.meta.prioritySort==="asc" ? "desc" : "asc";
+      save(); renderAll(); toast(`已按优先级${STATE.meta.prioritySort==="asc"?"升序":"降序"}排序`);
+      return;
+    }
     const caret=e.target.closest(".group-caret");
     if(caret){ e.stopPropagation(); toggleCollapse(caret.dataset.feat); return; }
     const add=e.target.closest(".group-add");
@@ -809,6 +860,42 @@ function bindGridDelegation(){
       }
     }
   });
+  grid.addEventListener("dragstart",e=>{
+    const head=e.target.closest(".group-head");
+    if(!head || e.target.closest(".group-caret,.group-add,.group-del,.gantt-priority-select,.editable,[contenteditable]")){
+      e.preventDefault(); return;
+    }
+    grid.dataset.dragFeat=head.dataset.feat;
+    head.classList.add("dragging");
+    e.dataTransfer.effectAllowed="move";
+    e.dataTransfer.setData("text/plain",head.dataset.feat);
+  });
+  grid.addEventListener("dragover",e=>{
+    const head=e.target.closest(".group-head");
+    if(!head || !grid.dataset.dragFeat || head.dataset.feat===grid.dataset.dragFeat) return;
+    e.preventDefault();
+    document.querySelectorAll("#ganttGrid .group-head.drag-over").forEach(el=>el.classList.remove("drag-over"));
+    head.classList.add("drag-over");
+  });
+  grid.addEventListener("dragleave",e=>{
+    const head=e.target.closest(".group-head");
+    if(head) head.classList.remove("drag-over");
+  });
+  grid.addEventListener("drop",e=>{
+    const target=e.target.closest(".group-head");
+    const sourceFeat=grid.dataset.dragFeat;
+    if(!target || !sourceFeat || target.dataset.feat===sourceFeat) return;
+    e.preventDefault();
+    moveFeatureBefore(sourceFeat,target.dataset.feat);
+    delete grid.dataset.dragFeat;
+    document.querySelectorAll("#ganttGrid .group-head.dragging,.group-head.drag-over").forEach(el=>el.classList.remove("dragging","drag-over"));
+    STATE.meta.prioritySort=null;
+    save(); renderAll(); toast("已调整需求显示位置");
+  });
+  grid.addEventListener("dragend",()=>{
+    delete grid.dataset.dragFeat;
+    document.querySelectorAll("#ganttGrid .group-head.dragging,.group-head.drag-over").forEach(el=>el.classList.remove("dragging","drag-over"));
+  });
 }
 
 /* ============ 详情编辑器（双击甘特条 / 新增）============ */
@@ -819,7 +906,9 @@ function openEditor(id, draft){
   if(!t) return;
   const f=(label,html)=>`<label class="block text-[11px] font-semibold mb-1" style="color:var(--muted)">${label}</label>${html}`;
   const inp=(k,val,type="text")=>`<input data-f="${k}" type="${type}" value="${esc(val)}" class="w-full btn !cursor-text mb-3" style="display:block">`;
-  const t2opts=(t1,sel)=>(TIER2_MAP[t1]||["全局"]).map(o=>`<option ${o===sel?"selected":""}>${o}</option>`).join("");
+  const t2Field=(t1,sel)=>t1==="其他"
+    ? `<input data-f="tier2" id="selT2" type="text" value="${esc(sel&&sel!=="全局"?sel:"")}" placeholder="填写外部合作部门 / 团队" class="w-full btn !cursor-text mb-3" style="display:block">`
+    : `<select data-f="tier2" id="selT2" class="w-full btn mb-3" style="display:block">${(TIER2_MAP[t1]||["全局"]).map(o=>`<option ${o===sel?"selected":""}>${o}</option>`).join("")}</select>`;
   const wrap=document.createElement("div");
   wrap.style.cssText="position:fixed;inset:0;background:rgba(43,45,42,.24);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(18px)";
   wrap.innerHTML=`<div style="background:rgba(255,255,255,.92);border:1px solid var(--hairline);border-radius:18px;width:460px;max-width:92vw;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.18)" onclick="event.stopPropagation()">
@@ -835,7 +924,7 @@ function openEditor(id, draft){
     </div>
     <div class="grid grid-cols-2 gap-3">
       <div>${f("部门",`<select data-f="tier1" id="selT1" class="w-full btn mb-3" style="display:block">${TIER_ORDER.map(o=>`<option ${o===t.tier1?"selected":""}>${o}</option>`).join("")}</select>`)}</div>
-      <div>${f("端 / 职能",`<select data-f="tier2" id="selT2" class="w-full btn mb-3" style="display:block">${t2opts(t.tier1,t.tier2)}</select>`)}</div>
+      <div id="tier2Wrap">${f("端 / 职能",t2Field(t.tier1,t.tier2))}</div>
     </div>
     <div class="grid grid-cols-2 gap-3">
       <div>${f("开始",inp("start",t.start,"date"))}</div>
@@ -854,15 +943,17 @@ function openEditor(id, draft){
   document.body.appendChild(wrap); refreshIcons();
   // Tier1 改变联动 Tier2 选项
   wrap.querySelector("#selT1").onchange=e=>{
-    wrap.querySelector("#selT2").innerHTML=t2opts(e.target.value,"");
+    wrap.querySelector("#tier2Wrap").innerHTML=f("端 / 职能",t2Field(e.target.value,e.target.value==="其他" ? "" : "全局"));
   };
   wrap.querySelector("#mClose").onclick=()=>document.body.removeChild(wrap);
   wrap.querySelector("#mSave").onclick=()=>{
     wrap.querySelectorAll("[data-f]").forEach(el=>{
       const k=el.dataset.f; let v=el.value;
       if(k==="progress") v=Math.max(0,Math.min(100,parseInt(v)||0));
+      if(k==="tier2") v=v.trim();
       t[k]=v;
     });
+    if(t.tier1==="其他" && !t.tier2) t.tier2="外部协作";
     if(parseD(t.end)<parseD(t.start)) t.end=t.start;
     if(isNew) STATE.tasks.push(t);   // 仅此刻才真正新增
     autoExpandRange(t); document.body.removeChild(wrap); save(); renderAll();
@@ -912,8 +1003,53 @@ function openFilterPanel(){
 function toast(msg){ const el=document.getElementById("toast"); el.textContent=msg; el.classList.add("show"); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove("show"),2200); }
 function refreshIcons(){ if(window.lucide) lucide.createIcons(); }
 function syncRangeInputs(){ document.getElementById("rangeStart").value=STATE.meta.rangeStart; document.getElementById("rangeEnd").value=STATE.meta.rangeEnd; }
+function updateHolidayHint(){
+  const el=document.getElementById("holidayHint");
+  if(!el) return;
+  const today=todayStr();
+  const upcoming=HOLIDAYS.map(h=>({...h,days:diffDays(today,h.date)}))
+    .filter(h=>h.days>=0&&h.days<=14)
+    .sort((a,b)=>a.days-b.days);
+  if(!upcoming.length){
+    el.innerHTML=`<i data-lucide="calendar-days" class="icon"></i>14天内暂无重要节日`;
+    el.title="按今天起未来 14 天计算";
+    return;
+  }
+  const text=upcoming.map(h=>`${h.name}${h.days===0?"今天":`${h.days}天后`}`).join(" · ");
+  el.innerHTML=`<i data-lucide="calendar-heart" class="icon"></i>${text}`;
+  el.title=upcoming.map(h=>`${h.date} · ${h.name} · ${h.type}`).join("\n");
+}
+function applyGanttHeight(){
+  const el=document.getElementById("ganttScroll");
+  if(el) el.style.maxHeight=(STATE.meta.ganttHeight||420)+"px";
+}
 function nextId(){ return nextIdFromList(STATE.tasks); }
 function nextIdFromList(list){ let max=0; list.forEach(t=>{ const m=/(\d+)$/.exec(t.id||""); if(m) max=Math.max(max,+m[1]); }); return "REQ-2026-"+String(max+1).padStart(3,"0"); }
+
+function bindGanttResizer(){
+  const handle=document.getElementById("ganttResizer");
+  const scroll=document.getElementById("ganttScroll");
+  if(!handle||!scroll||handle._bound) return;
+  handle._bound=true;
+  handle.addEventListener("mousedown",e=>{
+    e.preventDefault();
+    const startY=e.clientY;
+    const startH=scroll.getBoundingClientRect().height || STATE.meta.ganttHeight || 420;
+    const onMove=evt=>{
+      const maxH=Math.max(260,Math.floor(window.innerHeight-180));
+      STATE.meta.ganttHeight=Math.max(220,Math.min(maxH,Math.round(startH+evt.clientY-startY)));
+      applyGanttHeight();
+    };
+    const onUp=()=>{
+      document.removeEventListener("mousemove",onMove);
+      document.removeEventListener("mouseup",onUp);
+      save();
+      toast(`甘特图高度已调整为 ${STATE.meta.ganttHeight}px`);
+    };
+    document.addEventListener("mousemove",onMove);
+    document.addEventListener("mouseup",onUp);
+  });
+}
 
 function bindToolbar(){
   // 粒度
@@ -965,8 +1101,11 @@ function bindToolbar(){
           rangeStart:d.meta?.rangeStart||first.start,
           rangeEnd:d.meta?.rangeEnd||first.end,
           columnWidth:d.meta?.columnWidth,
+          ganttHeight:d.meta?.ganttHeight,
+          featureOrder:Array.isArray(d.meta?.featureOrder)?d.meta.featureOrder:[],
+          prioritySort:d.meta?.prioritySort||null,
           filters:d.meta?.filters||{priority:"全部",status:"全部",dept:"全部"},
-          collapsed:Array.isArray(d.meta?.collapsed)?d.meta.collapsed:[]
+          collapsed:[]
         },
         tasks:importedTasks
       });
@@ -977,9 +1116,9 @@ function bindToolbar(){
 }
 
 /* ============ 渲染入口 ============ */
-function renderAll(){ renderGantt(); bindYEdit(); renderTable(); refreshIcons(); }
-function redrawGantt(){ renderGantt(); bindYEdit(); refreshIcons(); }
-syncRangeInputs(); bindToolbar(); bindGridDelegation(); renderAll(); refreshIcons();
+function renderAll(){ applyGanttHeight(); updateHolidayHint(); renderGantt(); bindYEdit(); renderTable(); refreshIcons(); }
+function redrawGantt(){ applyGanttHeight(); updateHolidayHint(); renderGantt(); bindYEdit(); refreshIcons(); }
+syncRangeInputs(); bindToolbar(); bindGridDelegation(); bindGanttResizer(); renderAll(); refreshIcons();
 window.addEventListener("resize",()=>{ redrawGantt(); });
 </script>
 </body>
