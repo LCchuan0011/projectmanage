@@ -1,0 +1,436 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}.title{font-size:62px;font-weight:800;fill:#1f2933}.sub{font-size:28px;fill:#5f6c84}.axis{font-size:27px;font-weight:700;fill:#5f6c84}.tick{font-size:26px;fill:#5f6c84}.legend{font-size:27px;font-weight:700;fill:#5f6c84}.boxt{font-size:28px;font-weight:800;fill:#1f2933}.box{font-size:23px;fill:#5f6c84}.small{font-size:22px;fill:#5f6c84}.grid{stroke:#dee5ee;stroke-width:2}</style>
+<rect width="2400" height="1350" fill="#f9fafc"/>
+<rect x="50" y="45" width="2300" height="1250" rx="26" fill="#fff" stroke="#e1e7ef" stroke-width="2"/>
+<text x="90" y="128" class="title">App 组合矩阵：打开规模 vs 有效停留率（热门游戏标注）</text>
+<text x="92" y="186" class="sub">气泡大小代表总停留时长；横轴使用 log scale。数据区间：2026-06-10 至 2026-06-28</text>
+<rect x="92" y="228" width="30" height="30" rx="7" fill="#0f766e"/>
+<text x="137" y="246" class="legend">明星/主推型</text>
+<rect x="363" y="228" width="30" height="30" rx="7" fill="#b45309"/>
+<text x="408" y="246" class="legend">高曝光待优化型</text>
+<rect x="662" y="228" width="30" height="30" rx="7" fill="#2563eb"/>
+<text x="707" y="246" class="legend">小而深型</text>
+<rect x="877" y="228" width="30" height="30" rx="7" fill="#555862"/>
+<text x="922" y="246" class="legend">观察培育型</text>
+<rect x="1120" y="228" width="30" height="30" rx="7" fill="#9f1239"/>
+<text x="1165" y="246" class="legend">长尾冷启动型</text>
+<line x1="165" y1="1200.0" x2="2125" y2="1200.0" class="grid"/>
+<text x="89" y="1210.0" class="tick">0%</text>
+<line x1="165" y1="1027.0" x2="2125" y2="1027.0" class="grid"/>
+<text x="89" y="1037.0" class="tick">20%</text>
+<line x1="165" y1="854.0" x2="2125" y2="854.0" class="grid"/>
+<text x="89" y="864.0" class="tick">40%</text>
+<line x1="165" y1="681.0" x2="2125" y2="681.0" class="grid"/>
+<text x="89" y="691.0" class="tick">60%</text>
+<line x1="165" y1="508.0" x2="2125" y2="508.0" class="grid"/>
+<text x="89" y="518.0" class="tick">80%</text>
+<line x1="165" y1="335.0" x2="2125" y2="335.0" class="grid"/>
+<text x="89" y="345.0" class="tick">100%</text>
+<line x1="336.4" y1="335" x2="336.4" y2="1200" class="grid"/>
+<text x="336.4" y="1270" text-anchor="middle" class="tick">1</text>
+<line x1="757.9" y1="335" x2="757.9" y2="1200" class="grid"/>
+<text x="757.9" y="1270" text-anchor="middle" class="tick">10</text>
+<line x1="1306.1" y1="335" x2="1306.1" y2="1200" class="grid"/>
+<text x="1306.1" y="1270" text-anchor="middle" class="tick">100</text>
+<line x1="1873.2" y1="335" x2="1873.2" y2="1200" class="grid"/>
+<text x="1873.2" y="1270" text-anchor="middle" class="tick">1000</text>
+<text x="53" y="277" class="axis">有效停留率</text>
+<text x="1145.0" y="1262" text-anchor="middle" class="axis">打开 UV，log scale</text>
+<line x1="165" y1="930.8" x2="2125" y2="930.8" stroke="#b0bccb" stroke-width="2"/>
+<text x="1735" y="916.8" class="small">整体有效停留率 31.1%</text>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>河道救援应急治理平台 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>灵魂工位适配测试 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>麻将听牌器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>美食2048 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>侨批翻译官 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>入梦大观园·游园见本心 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="646.1" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>太空探险小游戏 | UV 6 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>星际贪吃蛇 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI瘦瘦 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>NARRATIVE Studio - 线上创意作品集 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>VOID//RUN 1.0 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>爱笑的小狐狸 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>憋住尿 | 膀胱再训练 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>打卡日历 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>火柴人格斗联盟 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>杰星宣纸厂网络宣传册 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>老板画饼逃生记 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>灵珠应用导出工具 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="646.1" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>梦幻抓娃娃 | UV 6 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>您的专属本地超市 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="679.2" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>农夫雪山救狐记 | UV 7 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>亲戚称呼计算器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="608.0" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>山东曲阜介绍页 | UV 5 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>糖果消消 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>图形计算器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>小清新记账本 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="646.1" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>月度报表精灵 | UV 6 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能文章与图片生成器 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>Excel数据匹配工具 （悬浮） | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>川麻血战 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>单机欢乐斗地主 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="562.9" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>人生自取其辱十件套 | UV 4 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>奢华时光宝盒 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>深证100期货模拟交易系统 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>围棋大师之路 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>乌合之众·速览 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>无限贪吃蛇 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>五子棋对战 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>写给未来的自己 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>IP地址综合工具 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>WiFi无线投屏助手 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>WWDC 2026 倒计时 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>暴力摩托游戏原型 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>财富蓝图·游戏化任务规划器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>城市安全地图 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="834.6" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>解开绳子 | UV 14 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>酒店足浴记账小程序 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>旅行开销记账本 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>千禧盗版游戏合集站 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>世界杯球星猫匹配测试 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>数字人对口型工具 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>万能测试盒 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的物品保质期 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>弦动：吉他尤克里里自学助手 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>心之港湾：你的随身情绪疗愈师 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>养己花园-种下好习惯 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>养生之道：太极与中医秘方 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>中国风俄罗斯方块 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI营销自动化软件 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>RNHV集装箱高压变频撬 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>VC投资人技能导航站 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>创始人Skills导航网站 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>免费电影播放器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="679.2" cy="1200.0" r="6.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>赛车游戏 | UV 7 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的午餐瘦身小助手 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>靶心射击 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>宝宝成长日记 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>经典吃豆人：迷宫大作战 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>每日60秒新闻 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>墓地逃亡 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="562.9" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>中药药方解读系统 | UV 4 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>电力期货交易系统 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>全国油气价格速览 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>向死而生 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>MeetBell-相铃 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="507.8" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>领导干部行为准则：总书记四点要求解读 | UV 3 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的健身伙伴 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能表格处理器 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能简历助手 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="562.9" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>魔兽主题 2048 | UV 4 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>诗词创作工具 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>说话英雄 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="562.9" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>线上掼蛋 | UV 4 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>抢车位小游戏 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>趣知小百科 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>拳影闯关 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>水果忍者切切乐 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>随心拍 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>坦克激战：经典重现 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>MatrixCalc | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>TaskFlow 任务进度追踪器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>快乐歌曲生成器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>美女直播互赞 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我也会塔防 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>520甜蜜大富翁 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>短视频脚本创作助手 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>古文四库全书 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>股票短差台账系统 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>黑洞吞噬游戏 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>炫彩 Tailwind 拾色器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>仙逆风格动漫 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI中医助手 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>安心对话AI | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>电影申报风险评估工具 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>Brew Joy-专属于你的家庭咖啡角 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>毛孩日常宝典 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>趣味答题王 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>上海大学深度介绍 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>圣斗士探索器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>数字牌游戏 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>双色球幸运选号器 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的旅行故事集 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>羊了个羊网页版 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>用药提醒记录小程序 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>HTML代码体验区 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>爱姿势游戏大全 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>哄女友语言编辑器 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>微信风格聊天应用 | UV 2 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>华东师范大学深度介绍 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>霍格沃茨之谜 - 巫师学院模拟器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>DogTI 狗狗灵魂探测器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>反恐对战游戏 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>股市大挑战 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>今日判官：你的生活决策神器！ | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>抗日射击游戏 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>利辛县宣传视频 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>闲拾模拟器 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>长者健康日记 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI灵性塔罗 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>情歌音乐制作 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>苏州乐园分享引流活动 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>图像生成与文章创作工具 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="336.4" cy="1200.0" r="6.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>无人机图像处理平台 | UV 1 | 有效停留率 0.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>宝石2048 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能冰箱管家 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>上下班打卡提醒器 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>出片大师 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>膀胱健康助手 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能伙伴助手 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="7.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>灵宠：流浪动物领养与陪伴日记 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="8.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>弹球大师：砖块冲击战 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="8.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>云端弈乐：围棋对弈 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="8.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>锐评分级小程序 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="8.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>Blast Master | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="8.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>热血少年 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI膳食配餐网页 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="608.0" cy="1027.0" r="9.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>大学高数你还在啃书本吗 | UV 5 | 有效停留率 20.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>高考后别做清单接龙 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>线上银信局｜给阿嬷的情书 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI旅行管家 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>退休时间我做主 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>抽卡打怪游戏 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>活力蛋白站 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>今天吃什么占卜 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="608.0" cy="1027.0" r="9.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>玄镜·天机 | UV 5 | 有效停留率 20.0%</title></circle>
+<circle cx="646.1" cy="1055.8" r="9.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>超市进销存管理工具 | UV 6 | 有效停留率 16.7%</title></circle>
+<circle cx="436.6" cy="767.5" r="9.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>手表版B站客户端 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="9.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>520爱情宣言 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="623.3" r="9.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>潮爷爷带你玩转重阳节 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="646.1" cy="1055.8" r="9.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>羽毛球助手 | UV 6 | 有效停留率 16.7%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>二十届四中全会精神知识问答 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>房价趋势测算工具 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>雪茄库存管理 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="646.1" cy="1055.8" r="9.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>母亲的身影 | UV 6 | 有效停留率 16.7%</title></circle>
+<circle cx="562.9" cy="983.8" r="9.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>照片真伪检测工具 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="9.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的在线商店商品橱窗 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="507.8" cy="911.7" r="9.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>每日AI一点通 | UV 3 | 有效停留率 33.3%</title></circle>
+<circle cx="679.2" cy="952.9" r="9.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>加油/加气价格模拟查询器 | UV 7 | 有效停留率 28.6%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>短视频VV时长分析器 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="9.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>四渡赤水沙盘分析工具 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="646.1" cy="911.7" r="10.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>修仙2048 | UV 6 | 有效停留率 33.3%</title></circle>
+<circle cx="562.9" cy="551.2" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>Robot Run | UV 4 | 有效停留率 75.0%</title></circle>
+<circle cx="507.8" cy="911.7" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>人生航班✈️ | UV 3 | 有效停留率 33.3%</title></circle>
+<circle cx="507.8" cy="911.7" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>爱逗 | UV 3 | 有效停留率 33.3%</title></circle>
+<circle cx="436.6" cy="335.0" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>三十七点五度 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="623.3" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>弯道大师 - Drift Master | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="646.1" cy="911.7" r="10.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>思念留言墙 | UV 6 | 有效停留率 33.3%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>六爻占卜助手 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>小学数学智能批改系统 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="767.5" r="10.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>一年级数学口算贪吃蛇 | UV 4 | 有效停留率 50.0%</title></circle>
+<circle cx="608.0" cy="854.0" r="10.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>精简易游戏 | UV 5 | 有效停留率 40.0%</title></circle>
+<circle cx="507.8" cy="911.7" r="10.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>刺激战场 | UV 3 | 有效停留率 33.3%</title></circle>
+<circle cx="562.9" cy="767.5" r="10.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>SBTi探索者：揭秘你的可持续行动力 | UV 4 | 有效停留率 50.0%</title></circle>
+<circle cx="734.3" cy="1007.8" r="10.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>农场天气模拟经营 | UV 9 | 有效停留率 22.2%</title></circle>
+<circle cx="608.0" cy="854.0" r="10.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>唐川英语根连根 | UV 5 | 有效停留率 40.0%</title></circle>
+<circle cx="507.8" cy="623.3" r="10.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>星际2048 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>工作任务上报 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="623.3" r="10.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>人生大事都是小事 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>表格计算器 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>前端网络安全扫描工具 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="10.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>肉体成圣：360天蜕变指南 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>匹配吧 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="911.7" r="10.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>一朵小红花 | UV 3 | 有效停留率 33.3%</title></circle>
+<circle cx="436.6" cy="335.0" r="10.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>高考作文热点素材 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>命运扭蛋机 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="10.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>四季如春我昆明 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="608.0" cy="854.0" r="10.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>梦想之旅定制器 | UV 5 | 有效停留率 40.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="11.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>加班管家 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="11.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>僵尸雷电：末日突击 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="11.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>高研单词根连根 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="11.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>摸鱼神器：一键伪装工作现场！ | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="11.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>吵完下班 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="562.9" cy="767.5" r="11.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>加班餐订购小助手 | UV 4 | 有效停留率 50.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="11.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>面相正缘匹配 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="11.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>武器对决：回合制小游戏 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="646.1" cy="911.7" r="11.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>稀土期货交易系统 | UV 6 | 有效停留率 33.3%</title></circle>
+<circle cx="708.3" cy="983.8" r="11.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>疯狂光头强 | UV 8 | 有效停留率 25.0%</title></circle>
+<circle cx="646.1" cy="767.5" r="11.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>树洞日志 | UV 6 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="11.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>茶韵雅集 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="11.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>创意甜品屋：中西合璧的甜蜜之旅 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="12.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>彼岸信笺 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="940.3" cy="1082.0" r="12.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>心灵驿站 | UV 22 | 有效停留率 13.6%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>古代汉语字典 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="12.3" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>海贼王卡牌对决 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="12.3" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>DGX Spark 命令手册 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.3" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>乐享陪诊 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="997.6" cy="1045.5" r="12.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>亲密接触动画演示游戏 | UV 28 | 有效停留率 17.9%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>绿境守望者 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="708.3" cy="1091.9" r="12.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>儿童男性健康急症速查器 | UV 8 | 有效停留率 12.5%</title></circle>
+<circle cx="979.9" cy="1000.4" r="12.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>喘口气 | UV 26 | 有效停留率 23.1%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>高考后的100件小事 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="12.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>凝星成珠 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="562.9" cy="767.5" r="12.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>凝血常规解读助手 | UV 4 | 有效停留率 50.0%</title></circle>
+<circle cx="879.7" cy="1047.4" r="12.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>早泄自测评估工具 | UV 17 | 有效停留率 17.6%</title></circle>
+<circle cx="646.1" cy="911.7" r="12.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>恋商测试-我恋商高达361 | UV 6 | 有效停留率 33.3%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>方块消消乐 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>AI伴侣聊天应用 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="12.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>「拉了么」智能肠道管家 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="905.7" cy="1017.9" r="12.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>贪吃蛇大挑战 | UV 19 | 有效停留率 21.1%</title></circle>
+<circle cx="850.5" cy="1084.7" r="12.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>向僵尸开炮 | UV 15 | 有效停留率 13.3%</title></circle>
+<circle cx="734.3" cy="815.6" r="13.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>爱情回忆录 | UV 9 | 有效停留率 44.4%</title></circle>
+<circle cx="905.7" cy="1063.4" r="13.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>拆弹专家 | UV 19 | 有效停留率 15.8%</title></circle>
+<circle cx="562.9" cy="983.8" r="13.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>极速漂移赛车 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="13.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>能写会算 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="767.5" r="13.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>菌语秘境：云南鲜味直达家 | UV 4 | 有效停留率 50.0%</title></circle>
+<circle cx="799.2" cy="983.8" r="13.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>万能开发工具箱 | UV 12 | 有效停留率 25.0%</title></circle>
+<circle cx="608.0" cy="854.0" r="13.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>雷霆战机：空战英豪 | UV 5 | 有效停留率 40.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="13.3" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>多Agent协作框架系统 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="13.4" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>灵境 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="13.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>二维码与网址互转工具 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="13.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的健康饮食助手 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="13.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>FanLive演唱会服务平台 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="13.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>一句情话 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="13.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>手机打印机 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="13.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>星际防御 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="646.1" cy="623.3" r="13.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>胖的起不来了 | UV 6 | 有效停留率 66.7%</title></circle>
+<circle cx="779.4" cy="806.8" r="13.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>拉，完了 | UV 11 | 有效停留率 45.5%</title></circle>
+<circle cx="734.3" cy="1007.8" r="13.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>导弹机器人游戏 | UV 9 | 有效停留率 22.2%</title></circle>
+<circle cx="507.8" cy="623.3" r="14.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>超级英雄2048 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="507.8" cy="623.3" r="14.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智慧居家养老伴侣 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="507.8" cy="623.3" r="14.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的早报定制 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="1057.8" cy="1176.0" r="14.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>5v5对决游戏 | UV 36 | 有效停留率 2.8%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>插画创作助手 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="893.0" cy="1007.8" r="14.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>高考数学100真题卡 | UV 18 | 有效停留率 22.2%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>求助表达卡生成器 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="799.2" cy="695.4" r="14.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>智能入职向导 | UV 12 | 有效停留率 58.3%</title></circle>
+<circle cx="507.8" cy="623.3" r="14.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>万能工具盒 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="1164.7" cy="1107.3" r="14.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>坦克大战僵尸科幻版 | UV 56 | 有效停留率 10.7%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>虚拟聊天模拟器 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>无障碍出行说明书 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="679.2" cy="829.3" r="14.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>静心正念冥想APP | UV 7 | 有效停留率 42.9%</title></circle>
+<circle cx="708.3" cy="875.6" r="14.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>画路挑战 | UV 8 | 有效停留率 37.5%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>周边趣店地图 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="929.3" cy="994.0" r="14.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>盖塔楼 | UV 21 | 有效停留率 23.8%</title></circle>
+<circle cx="436.6" cy="335.0" r="14.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>昆虫收集大冒险！ | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>掌中乾坤 - 小六壬随身卜 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>手势魔法 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="14.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>辽宁工程技术大学深度介绍 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="817.5" cy="1000.4" r="14.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>你家潮到什么级别了？ | UV 13 | 有效停留率 23.1%</title></circle>
+<circle cx="917.8" cy="897.2" r="14.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>西安城市旅游指南 | UV 20 | 有效停留率 35.0%</title></circle>
+<circle cx="979.9" cy="1033.7" r="14.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>心动转盘-转到是什么做什么 | UV 26 | 有效停留率 19.2%</title></circle>
+<circle cx="562.9" cy="551.2" r="14.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>心灵暖阳 | UV 4 | 有效停留率 75.0%</title></circle>
+<circle cx="1160.3" cy="1027.0" r="14.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>聊天交友 | UV 55 | 有效停留率 20.0%</title></circle>
+<circle cx="757.9" cy="854.0" r="14.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>进化2048 | UV 10 | 有效停留率 40.0%</title></circle>
+<circle cx="1151.3" cy="1102.1" r="15.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>坤坤游戏 | UV 53 | 有效停留率 11.3%</title></circle>
+<circle cx="679.2" cy="952.9" r="15.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>短句赚钱应用 | UV 7 | 有效停留率 28.6%</title></circle>
+<circle cx="562.9" cy="551.2" r="15.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>数学计算器 | UV 4 | 有效停留率 75.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="15.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>复古成三棋 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="562.9" cy="983.8" r="15.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>明兰理财记 | UV 4 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="767.5" r="15.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>汉字笔顺学习助手 | UV 2 | 有效停留率 50.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="15.1" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>战争避难指南工具 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="970.6" cy="992.4" r="15.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>良子酷跑 | UV 25 | 有效停留率 24.0%</title></circle>
+<circle cx="708.3" cy="983.8" r="15.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>危险的货车 | UV 8 | 有效停留率 25.0%</title></circle>
+<circle cx="917.8" cy="724.2" r="15.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>中高考家长陪考急救包 | UV 20 | 有效停留率 55.0%</title></circle>
+<circle cx="850.5" cy="1142.3" r="15.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>麻将胡了闯关小游戏 | UV 15 | 有效停留率 6.7%</title></circle>
+<circle cx="979.9" cy="867.3" r="15.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>乔布斯经典计算器 | UV 26 | 有效停留率 38.5%</title></circle>
+<circle cx="1095.0" cy="1055.8" r="15.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>童趣跳格子 | UV 42 | 有效停留率 16.7%</title></circle>
+<circle cx="917.8" cy="983.8" r="15.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>AI立体超市 | UV 20 | 有效停留率 25.0%</title></circle>
+<circle cx="562.9" cy="551.2" r="15.3" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>手机壁纸生成小程序 | UV 4 | 有效停留率 75.0%</title></circle>
+<circle cx="757.9" cy="1027.0" r="15.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>诗词大挑战 | UV 10 | 有效停留率 20.0%</title></circle>
+<circle cx="929.3" cy="911.7" r="15.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>范大家书法临摹 | UV 21 | 有效停留率 33.3%</title></circle>
+<circle cx="436.6" cy="335.0" r="15.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>地牢探险家 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="1151.3" cy="1004.2" r="15.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>绝地突击 | UV 53 | 有效停留率 22.6%</title></circle>
+<circle cx="1122.2" cy="905.5" r="16.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>中二帝也要学英语 | UV 47 | 有效停留率 34.0%</title></circle>
+<circle cx="1095.0" cy="870.5" r="16.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>复古98：在线版Windows 98模拟器 | UV 42 | 有效停留率 38.1%</title></circle>
+<circle cx="507.8" cy="623.3" r="16.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>不确定感焦虑测试 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="817.5" cy="1000.4" r="16.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>拉杆子过关小游戏 | UV 13 | 有效停留率 23.1%</title></circle>
+<circle cx="734.3" cy="719.4" r="16.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>倚天屠鸟记·江湖路 | UV 9 | 有效停留率 55.6%</title></circle>
+<circle cx="646.1" cy="767.5" r="16.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>加减法口算小能手 | UV 6 | 有效停留率 50.0%</title></circle>
+<circle cx="1219.0" cy="854.0" r="16.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>广东广通汽车救援有限公司道路救援服务官网 | UV 70 | 有效停留率 40.0%</title></circle>
+<circle cx="679.2" cy="829.3" r="16.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>装备2048 | UV 7 | 有效停留率 42.9%</title></circle>
+<circle cx="1260.5" cy="991.6" r="16.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>贪吃蛇趣味版 | UV 83 | 有效停留率 24.1%</title></circle>
+<circle cx="336.4" cy="335.0" r="16.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>科目三通关大挑战 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="623.3" r="16.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>鹅腿摊模拟器 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="708.3" cy="983.8" r="16.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>自由打金生存挑战 | UV 8 | 有效停留率 25.0%</title></circle>
+<circle cx="436.6" cy="335.0" r="16.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>喵了个咪 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="608.0" cy="681.0" r="16.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>教父模拟器 | UV 5 | 有效停留率 60.0%</title></circle>
+<circle cx="757.9" cy="767.5" r="16.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>精益创业咨询所 | UV 10 | 有效停留率 50.0%</title></circle>
+<circle cx="979.9" cy="900.6" r="16.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>便捷手机打印机助手 | UV 26 | 有效停留率 34.6%</title></circle>
+<circle cx="336.4" cy="335.0" r="16.8" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>寻宝猎人 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="817.5" cy="734.2" r="16.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>人生倒数日记 | UV 13 | 有效停留率 53.8%</title></circle>
+<circle cx="779.4" cy="806.8" r="16.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>贱鸟跳跳 | UV 11 | 有效停留率 45.5%</title></circle>
+<circle cx="336.4" cy="335.0" r="16.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>高研单词根连根 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="17.0" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>智能健身助手 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="507.8" cy="335.0" r="17.2" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>妙笔生花：你的AI小说搭档 | UV 3 | 有效停留率 100.0%</title></circle>
+<circle cx="817.5" cy="601.2" r="17.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>便捷手机打印机应用 | UV 13 | 有效停留率 69.2%</title></circle>
+<circle cx="1219.0" cy="1039.4" r="17.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>大长腿 | UV 70 | 有效停留率 18.6%</title></circle>
+<circle cx="997.6" cy="891.1" r="17.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>灵境塔罗占卜 | UV 28 | 有效停留率 35.7%</title></circle>
+<circle cx="1127.3" cy="1019.8" r="17.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>期权策略沙盘 | UV 48 | 有效停留率 20.8%</title></circle>
+<circle cx="1354.8" cy="1015.7" r="17.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>每日一言 | UV 122 | 有效停留率 21.3%</title></circle>
+<circle cx="436.6" cy="335.0" r="17.7" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>天天单词打卡 | UV 2 | 有效停留率 100.0%</title></circle>
+<circle cx="1475.0" cy="1100.0" r="17.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>女性向恋爱互动小程序 | UV 199 | 有效停留率 11.6%</title></circle>
+<circle cx="970.6" cy="957.8" r="17.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>3D魔方游戏 | UV 25 | 有效停留率 28.0%</title></circle>
+<circle cx="562.9" cy="551.2" r="17.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我替AI活着 | UV 4 | 有效停留率 75.0%</title></circle>
+<circle cx="757.9" cy="940.5" r="17.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>恐龙2048 | UV 10 | 有效停留率 30.0%</title></circle>
+<circle cx="1117.0" cy="1049.6" r="17.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>掌上象棋大师 | UV 46 | 有效停留率 17.4%</title></circle>
+<circle cx="507.8" cy="623.3" r="17.9" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>五子棋游戏 | UV 3 | 有效停留率 66.7%</title></circle>
+<circle cx="708.3" cy="875.6" r="17.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>2048 增强版 | UV 8 | 有效停留率 37.5%</title></circle>
+<circle cx="1395.5" cy="1061.8" r="18.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>视频投放平台 | UV 144 | 有效停留率 16.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="18.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>线上德扑游戏 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="608.0" cy="681.0" r="18.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>麻将像素大冒险 | UV 5 | 有效停留率 60.0%</title></circle>
+<circle cx="1269.2" cy="998.8" r="18.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>超级吃豆大冒险 | UV 86 | 有效停留率 23.3%</title></circle>
+<circle cx="679.2" cy="582.1" r="18.6" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>一周约会模拟器 | UV 7 | 有效停留率 71.4%</title></circle>
+<circle cx="779.4" cy="964.1" r="18.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>末日搜打撤 | UV 11 | 有效停留率 27.3%</title></circle>
+<circle cx="779.4" cy="649.5" r="18.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>开心日记 | UV 11 | 有效停留率 63.6%</title></circle>
+<circle cx="708.3" cy="875.6" r="18.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>慢享农场 | UV 8 | 有效停留率 37.5%</title></circle>
+<circle cx="646.1" cy="767.5" r="19.3" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>人生模拟器 | UV 6 | 有效停留率 50.0%</title></circle>
+<circle cx="1215.5" cy="886.6" r="19.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>咖啡人生 | UV 69 | 有效停留率 36.2%</title></circle>
+<circle cx="799.2" cy="767.5" r="19.4" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>斗破苍穹·炼丹师之路 | UV 12 | 有效停留率 50.0%</title></circle>
+<circle cx="1348.7" cy="1003.7" r="19.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>Eggy Car | UV 119 | 有效停留率 22.7%</title></circle>
+<circle cx="1451.7" cy="994.5" r="19.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>渣男检测仪 | UV 181 | 有效停留率 23.8%</title></circle>
+<circle cx="1057.8" cy="911.7" r="19.6" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>坦克防线：保卫基地 | UV 36 | 有效停留率 33.3%</title></circle>
+<circle cx="905.7" cy="835.8" r="19.6" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>方块爆破：消除挑战！ | UV 19 | 有效停留率 42.1%</title></circle>
+<circle cx="893.0" cy="959.7" r="19.8" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>Tower Defense 2048 | UV 18 | 有效停留率 27.8%</title></circle>
+<circle cx="905.7" cy="972.4" r="19.9" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>只有一扇门-Level Devil | UV 19 | 有效停留率 26.3%</title></circle>
+<circle cx="1360.8" cy="909.4" r="20.1" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>《诗经》APP | UV 125 | 有效停留率 33.6%</title></circle>
+<circle cx="1222.4" cy="883.2" r="20.4" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>月神杯·重生成为作弊者 | UV 71 | 有效停留率 36.6%</title></circle>
+<circle cx="1014.1" cy="998.2" r="20.4" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>神牌斗地主 | UV 30 | 有效停留率 23.3%</title></circle>
+<circle cx="336.4" cy="335.0" r="20.5" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>我的虚拟人生之旅 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="336.4" cy="335.0" r="20.6" fill="#9f1239" fill-opacity="0.44" stroke="#9f1239" stroke-opacity=".75" stroke-width="2"><title>两界行者 | UV 1 | 有效停留率 100.0%</title></circle>
+<circle cx="1400.6" cy="911.7" r="20.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>鹅难财 | UV 147 | 有效停留率 33.3%</title></circle>
+<circle cx="1155.8" cy="863.6" r="20.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>饮食健康助手 | UV 54 | 有效停留率 38.9%</title></circle>
+<circle cx="757.9" cy="940.5" r="20.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>五子棋对弈 | UV 10 | 有效停留率 30.0%</title></circle>
+<circle cx="1173.2" cy="871.9" r="21.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>AI爆款短剧生成系统 | UV 58 | 有效停留率 37.9%</title></circle>
+<circle cx="1348.7" cy="902.0" r="21.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>平凡人生模拟器 | UV 119 | 有效停留率 34.5%</title></circle>
+<circle cx="1408.8" cy="972.4" r="21.0" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>僵尸射击游戏 | UV 152 | 有效停留率 26.3%</title></circle>
+<circle cx="1860.8" cy="1094.5" r="21.1" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>性教育交互演示 | UV 951 | 有效停留率 12.2%</title></circle>
+<circle cx="1204.6" cy="964.1" r="21.4" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>狂暴飞车 | UV 66 | 有效停留率 27.3%</title></circle>
+<circle cx="608.0" cy="681.0" r="21.5" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>咩了个咩肉鸽版 | UV 5 | 有效停留率 60.0%</title></circle>
+<circle cx="1629.1" cy="869.8" r="21.7" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>孩子居然觉得我是「暴躁狸花」？ | UV 372 | 有效停留率 38.2%</title></circle>
+<circle cx="1122.2" cy="868.7" r="21.7" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>点球达人 | UV 47 | 有效停留率 38.3%</title></circle>
+<circle cx="1348.7" cy="872.9" r="21.8" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>精子的罗曼蒂克消亡史 | UV 119 | 有效停留率 37.8%</title></circle>
+<circle cx="734.3" cy="719.4" r="21.8" fill="#2563eb" fill-opacity="0.61" stroke="#2563eb" stroke-opacity=".75" stroke-width="2"><title>弈智魔棋：魔法象棋对决 | UV 9 | 有效停留率 55.6%</title></circle>
+<circle cx="1893.4" cy="1001.5" r="22.0" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>聊天交友 | UV 1,085 | 有效停留率 22.9%</title></circle>
+<circle cx="1379.7" cy="886.0" r="22.9" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>贾嬛传：宫斗传奇 | UV 135 | 有效停留率 36.3%</title></circle>
+<circle cx="1729.2" cy="956.6" r="23.5" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>AI地牢探索 | UV 558 | 有效停留率 28.1%</title></circle>
+<circle cx="1529.2" cy="858.2" r="23.7" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>方块爆破：消除挑战！ | UV 248 | 有效停留率 39.5%</title></circle>
+<circle cx="1564.3" cy="867.3" r="24.2" fill="#555862" fill-opacity="0.48" stroke="#555862" stroke-opacity=".75" stroke-width="2"><title>中国VC投资模拟器 | UV 286 | 有效停留率 38.5%</title></circle>
+<circle cx="1849.1" cy="844.3" r="24.2" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>墨侠传说-橘头火柴人格斗 | UV 907 | 有效停留率 41.1%</title></circle>
+<circle cx="1626.5" cy="812.2" r="24.2" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>父亲节动物人格测试 | UV 368 | 有效停留率 44.8%</title></circle>
+<circle cx="1732.2" cy="927.5" r="24.7" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>水墨华容道 | UV 565 | 有效停留率 31.5%</title></circle>
+<circle cx="1907.3" cy="1013.9" r="24.8" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>智能斗地主大师 | UV 1,148 | 有效停留率 21.5%</title></circle>
+<circle cx="1776.2" cy="973.2" r="25.6" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>休闲麻将 | UV 675 | 有效停留率 26.2%</title></circle>
+<circle cx="2049.6" cy="942.4" r="25.7" fill="#b45309" fill-opacity="0.61" stroke="#b45309" stroke-opacity=".75" stroke-width="2"><title>技能五子棋 | UV 2,042 | 有效停留率 29.8%</title></circle>
+<circle cx="1802.5" cy="734.7" r="28.4" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>字母合成大闯关 | UV 751 | 有效停留率 53.8%</title></circle>
+<circle cx="1919.5" cy="799.8" r="28.6" fill="#0f766e" fill-opacity="0.61" stroke="#0f766e" stroke-opacity=".75" stroke-width="2"><title>咩了个咩 | UV 1,206 | 有效停留率 46.3%</title></circle>
+<line x1="1919.5" y1="799.8" x2="1280" y2="686" stroke="#9ea9b8" stroke-width="2"/>
+<rect x="1260" y="630" width="510" height="126" rx="12" fill="#fff" stroke="#e3e9f2" stroke-width="2"/>
+<rect x="1260" y="630" width="12" height="126" rx="6" fill="#0f766e"/>
+<text x="1288" y="666" class="boxt">综合最强：咩了个咩</text>
+<text x="1288" y="710" class="box">打开 UV 1,206｜停留率 46.3%｜总停留 70.1h</text>
+<text x="1288" y="742" class="box" fill="#0f766e">既有规模，又能留下来玩</text>
+<line x1="1802.5" y1="734.7" x2="1665" y2="576" stroke="#9ea9b8" stroke-width="2"/>
+<rect x="1645" y="520" width="510" height="126" rx="12" fill="#fff" stroke="#e3e9f2" stroke-width="2"/>
+<rect x="1645" y="520" width="12" height="126" rx="6" fill="#0f766e"/>
+<text x="1673" y="556" class="boxt">粘性冠军：字母合成大闯关</text>
+<text x="1673" y="600" class="box">打开 UV 751｜停留率 53.8%｜人均 9.0min</text>
+<text x="1673" y="632" class="box" fill="#0f766e">进入后的停留深度最好</text>
+<line x1="2049.6" y1="942.4" x2="1645" y2="996" stroke="#9ea9b8" stroke-width="2"/>
+<rect x="1625" y="940" width="510" height="126" rx="12" fill="#fff" stroke="#e3e9f2" stroke-width="2"/>
+<rect x="1625" y="940" width="12" height="126" rx="6" fill="#b45309"/>
+<text x="1653" y="976" class="boxt">流量冠军：技能五子棋</text>
+<text x="1653" y="1020" class="box">打开 UV 2,042｜停留率 29.8%｜总停留 13.4h</text>
+<text x="1653" y="1052" class="box" fill="#b45309">最容易吸引用户打开</text>
+<text x="90" y="1280" class="small">注：打开 UV 为 app-day 维度加总；有效停留按原表口径为使用 app 超过 1 秒。</text>
+</svg>
